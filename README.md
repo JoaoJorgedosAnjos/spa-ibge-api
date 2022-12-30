@@ -23,7 +23,8 @@ Caso o município tenha vários distritos, eles serão todos exibidos na tela. �
 
 <img src="./public/assets/images/gif-3.gif" alt="Gif monstrando o botão de voltar para o topo da tela"/>
 
-A aplicação é responsiva e funciona bem em todos os tamanhos de tela
+Em caso de lentidão da internet ou demora da resposta da API, será mostrado na tela a frase “carregando...” até que o conteúdo seja totalmente carregado. 
+A aplicação é responsiva e funciona bem em todos os tamanhos de tela.
 
 <img src="./public/assets/images/gif-4.gif" alt="Gif mostrando o app funcionando em várias telas e resoluções"/>
 
