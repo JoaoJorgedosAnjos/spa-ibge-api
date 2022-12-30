@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const getStates = createAsyncThunk(
     'states/getStates',
     async () => {
-        const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
+        const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome');
         return response.json();
     }
 );
@@ -25,9 +25,7 @@ const statesSlice = createSlice(({
         builder.addCase(getStates.rejected, (state, action) => {
             state.loading = false;
         });
-
     }
-
 }))
 
 export default statesSlice.reducer;

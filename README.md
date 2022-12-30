@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# SPA consumindo a API do IBGE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Indice
+#### 1. Descrição da aplicação e funcionalidades
+#### 2. Ferramentas utilizadas
+#### 3. Justificativa do design do projeto
+#### 4. Como baixar/clonar e rodar o projeto
 
-## Available Scripts
+## 1.	Descrição da aplicação: 
+Tem a finalidade de exibir dois selects na tela, um select de estados e o outro de municípios.
 
-In the project directory, you can run:
+<img src="./public/assets/images/tela-inicial.png" alt="Tela inical da aplicação"/>
 
-### `npm start`
+Ao clicar no select, é possível pesquisar ou selecionar um estado ou município. O select dos municípios só mostra as opções quando um estado é selecionado no primeiro select.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="./public/assets/images/gif-1.gif" alt="Gif dos selects pesquisando e selecionando "/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Depois de selecionar um estado e município vai ser exibido na tela os distritos daquele município, com as seguintes informações: nome do distrito, microrregião, mesorregião, UF e a região.
 
-### `npm test`
+<img src="./public/assets/images/gif-2.gif" alt="Gif mostrando as informações na tela depois de selecionar os selects"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Caso o município tenha vários distritos, eles serão todos exibidos na tela. É possível retornar para o começo da aplicação utilizando um botão que fica visível na direita da tela quando o usuário rolar a página. Esse botão só aparece a partir de um ponto da rolagem da página.
 
-### `npm run build`
+<img src="./public/assets/images/gif-3.gif" alt="Gif monstrando o botão de voltar para o topo da tela"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A aplicação é responsiva e funciona bem em todos os tamanhos de tela
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img src="./public/assets/images/gif-4.gif" alt="Gif mostrando o app funcionando em várias telas e resoluções"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 2.	Ferramentas utilizadas
+React, Redux, Redux toolkit, Javascript, styled component, React-select, react-scroll-to-top
+Javascript juntamente com o React. O Fetch da API do IBGE foi realizado com o redux toolkit utilizando redux thunk. “O Redux Thunk é um middleware que permite chamar criadores de ação que retornam uma função em vez de um objeto de ação. Essa função recebe o método de expedição do armazenamento, que é usado então para expedir ações síncronas regulares dentro do corpo da função assim que as operações assíncronas forem concluídas.” Styled component foi utilizado para estilizar grande parte dos componentes da aplicação. React-select foi utilizado para estilizar e utilizar as funções de pesquisa nos selects. React-scroll-to-top foi utilizado para voltar para o topo da aplicação e também foi estilizado com o styled componente.
 
-### `npm run eject`
+Citação do redux thunk: https://www.digitalocean.com/community/tutorials/redux-redux-thunk-pt
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 3.	Justificativa do design do projeto
+A aplicação foi pensada para mostrar os dois selects na tela e as informações dos distritos e que seja possível visualizar em qualquer dispositivo de celular, tablet ou desktop.
+A disposição dos componentes na tela foi pensada para ser uma aplicação intuitiva, fácil de utilizar e que também assemelha-se a aplicativos de celular.
+O botão de voltar a página para o inicio foi pensado para facilitar a experiência do(a) usuário(a). Caso ele(a) precise ir até o final da lista de distritos, pode voltar para o topo da página com um simples clique no botão ao invés de rolar a página inteira de volta.
+ 
+## 4.	Como baixar/clonar e rodar o projeto
+1.	Clonar ou baixar o código do repositório
+2.	Abrir o projeto dentro do Visual Studio Code (Vs Code)
+3.	Instalar os pacotes utilizados no projeto no terminal com “npm install”
+4.	Inicializar o projeto com o “npm start” no terminal

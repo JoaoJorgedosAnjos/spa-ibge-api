@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import statesSlice from "./features/statesSlice";
 import countySlice from "./features/countySlice";
- 
-export const store =  configureStore({
-    reducer:{
-        estado: statesSlice,
-        municipio: countySlice,
+import infosSlice from "./features/infosSlice";
+
+export const store = configureStore({
+    reducer: {
+        estados: statesSlice,
+        municipios: countySlice,
+        infos: infosSlice,
     },
 });
