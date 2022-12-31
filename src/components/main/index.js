@@ -1,5 +1,5 @@
 import { GetSelectCounties } from "../selects/select-counties"
-import { GetDistrictInfos } from "../selects/districts-infos"
+import { GetDistrictInfos } from "../districts-infos"
 import { GetSelectStates } from "../selects/select-states/"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
